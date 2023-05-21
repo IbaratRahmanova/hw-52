@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import CardView from './СardView/СardView';
+import CardDeck from "./lib/CardDeck";
 import './App.css';
 import './cards.css';
 
 const App = () => {
-  const
+  const cardDeck = new CardDeck();
 
   return (
     <div className="App">
