@@ -4,18 +4,25 @@ import CardDeck from "./lib/CardDeck";
 import './App.css';
 import './cards.css';
 import Card from "./lib/Card";
+// import PokerHand from "./lib/PokerHand";
 
 const App = () => {
   const [cards2, setCards] = useState<Card[]>([]);
+
+
 
   const dealCards = () => {
     const cardDeck = new CardDeck();
     const cards1 = cardDeck.getCards(5);
 
     setCards(cards1);
+    console.log(cards1);
   };
 
-  if (cards2.length === 0) return <button onClick={dealCards}>Deal cards</button>;
+  // const pokerHand = new PokerHand(cards2);
+  // pokerHand.getOutcome();
+
+  if (cards2.length === 0) return <button className="custom-btn btn-14" onClick={dealCards}>Deal cards</button>;
 
   return (
     <div className="App">

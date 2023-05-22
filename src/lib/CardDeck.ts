@@ -1,6 +1,5 @@
 import Card from "./Card";
 
-
 class CardDeck {
   private readonly ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
   private readonly suits = ['spades', 'hearts', 'diams', 'clubs'];
@@ -16,8 +15,8 @@ class CardDeck {
 
   public getCard = () => {
     const ind = Math.floor(Math.random()*53);
-    let removedCard: Card[];
-    removedCard = this.deck.splice(ind, 1);
+    // let removedCard: Card[];
+    const removedCard = this.deck.splice(ind, 1);
     return removedCard;
   };
 
@@ -28,6 +27,6 @@ class CardDeck {
       removedCards.push(removedCard[0]);
     }
     return removedCards;
-  }
+  };
 }
 export default CardDeck;
