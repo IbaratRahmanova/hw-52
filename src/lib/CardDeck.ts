@@ -16,8 +16,7 @@ class CardDeck {
   public getCard = () => {
     const ind = Math.floor(Math.random()*53);
     // let removedCard: Card[];
-    const removedCard = this.deck.splice(ind, 1);
-    return removedCard;
+    return  this.deck.splice(ind, 1);
   };
 
   public getCards = (howMany: number) => {
