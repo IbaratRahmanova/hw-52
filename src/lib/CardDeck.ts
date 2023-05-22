@@ -3,7 +3,7 @@ import Card from "./Card";
 
 class CardDeck {
   private readonly ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-  private readonly suits = ['♦', '♥', '♣', '♠'];
+  private readonly suits = ['spades', 'hearts', 'diams', 'clubs'];
   public deck: Card[] = [];
   constructor() {
     this.suits.forEach(suit => {
@@ -15,8 +15,9 @@ class CardDeck {
   }
 
   public getCard = () => {
-    const ind = Math.floor(Math.random()*51);
-    const removedCard = this.deck.splice(ind, 1);
+    const ind = Math.floor(Math.random()*53);
+    let removedCard: Card[];
+    removedCard = this.deck.splice(ind, 1);
     return removedCard;
   };
 

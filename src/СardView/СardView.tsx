@@ -2,6 +2,7 @@ import React from 'react';
 interface ICardViewProps extends React.PropsWithChildren {
   rank: string;
   suit: string;
+
 }
 const СardView: React.FC<ICardViewProps> = props => {
   const cardClasses = `card rank-${props.rank.toLowerCase()} ${props.suit}`;
